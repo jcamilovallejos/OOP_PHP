@@ -39,4 +39,4 @@ $collection = new VideosCollection([
     new Video('Some Video', 3),
 ]);
 
-echo $collection->sum('length');
+echo $collection->length();
