@@ -31,7 +31,9 @@ class VideosCollection extends Collection
 
 class Video
 {
-    public string $title;
+    //A private method or property can only be accessed from within the enclosing class.
+    //Even subclasses have no access.
+    private string $title;
     public float $length;
 
     public function __construct($title, $length)
@@ -51,16 +53,6 @@ class Video
     public function setTitle(string $title): void
     {
         $this->title = $title;
-    }
-
-    public function getLength(): float
-    {
-        return $this->length;
-    }
-
-    public function setLength(float $length): void
-    {
-        $this->length = $length;
     }
 }
 
