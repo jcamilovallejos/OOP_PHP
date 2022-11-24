@@ -9,14 +9,14 @@ class Collection
         $this->items = $items;
     }
 
-    public function sum($key){
+    public function sum($key) : float {
         return array_sum(array_map(fn($item) => $item->$key, $this->items));
     }
 }
 
 class VideosCollection extends Collection
 {
-    public function length(){
+    public function length() : float {
         return $this->sum('length');
     }
 }
