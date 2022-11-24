@@ -1,7 +1,7 @@
 <?php
 
-//It can not be instanced
-//You must use abstract methods in the new class
+//An abstract class cannot be instantiated. Instead, it defines (and, optionally, partially
+//implements) the interface for any class that might extend it.
 abstract class AchievementType{
 
     public function name()
@@ -15,6 +15,8 @@ abstract class AchievementType{
         return strtolower(str_replace(' ', '-', $this->name())).'.png';
     }
 
+    //In creating an abstract method, you ensure that an implementation will be available in all
+    //concrete child classes, but you leave the details of that implementation undefined.
     abstract public function qualifier($user);
 }
 
@@ -22,6 +24,7 @@ abstract class AchievementType{
 
 class FirstThousandPoints extends AchievementType
 {
+    //You must use abstract methods in the new class
     public function qualifier($user)
     {
         // TODO: Implement qualifier() method.
