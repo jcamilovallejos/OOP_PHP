@@ -42,7 +42,7 @@ class Video
         $this->length = $length;
     }
 
-    //Even when client programmers need to work with values held by your class, it is often a good
+    //When client programmers need to work with values held by your class, it is often a good
     //idea to deny direct access to properties, providing methods instead that relay the needed values.
     //Such methods are known as accessors or getters and setters.
     public function getTitle(): string
